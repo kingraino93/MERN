@@ -1,1 +1,3 @@
-# MERN
+# MERN APP
+
+- Recipe App
