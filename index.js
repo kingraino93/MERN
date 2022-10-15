@@ -3,17 +3,23 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 
 const app = express();
+const indexController = require('./controllers/index_controller')
 
 //middleware
 app.use(express.json());
+app.use(express.urlencoded({extended: true}));
 
 //routes
-app.use("/", home);
+app.use('/', indexController);
 
 //db connection
 mongoose
   .connect(process.env.MONGO_URI, {
-    userNewUrlParser: true,
+
+    //got an error with this guy 
+
+    //userNewUrlParser: true, 
+
     useUnifiedTopology: true,
   })
   .then(() => console.log("DB connected!!"))
