@@ -1,26 +1,32 @@
-//sorry guys I dont think I can make class sunday
-
 //DEPENDENCIES
-
-//setting this to index for now
 const index = require('express').Router();
 const { response } = require('express');
+const Recipe = require('../models/recipe')
 
-//HOME
+//GET ALL
 index.get('/', async (req, res) => {
    try {
-      res.status(200).send('INDEX')
-      console.log('Index Page')
+      let recipes = await Recipe.find()
+      res.status(200).send(recipes)
+     
    } catch (error) {
-      res.status(500)
+      res.status(500).json({message: 'Error Retreiving Recipes'})
       console.log(error)
    }
 })
 
-//NOT FOUND
-index.get('*', (req, res) => {
-   res.status(404)
-   res.send('Page Not Found')
+//ADD NEW
+index.post('/', async (req, res) => {
+   try {
+      const recipe = await new Recipe({
+         ...req.body
+      }).save()
+
+      res.send(recipe)
+
+   } catch (error) {
+      res.status(500).json({message: 'Unable to add Recipe'})
+   }
 })
 
 module.exports = index

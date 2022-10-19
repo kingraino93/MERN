@@ -12,6 +12,12 @@ app.use(express.urlencoded({ extended: true }));
 //routes
 app.use("/recipe", indexController);
 
+//NOT FOUND
+index.get('*', (req, res) => {
+  res.status(404)
+  res.send('Page Not Found')
+})
+
 //db connection
 mongoose
   .connect(process.env.MONGO_URI, {
