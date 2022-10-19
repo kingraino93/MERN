@@ -1,7 +1,7 @@
 {
   "main": "index.js",
   "scripts": {
-    "start": "npm start"
+    "start": "node start"
   },
   "dependencies": {
     "dotenv": "^16.0.3",
