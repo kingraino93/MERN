@@ -1,6 +1,5 @@
 //DEPENDENCIES
 const index = require('express').Router();
-const { response } = require('express');
 const Recipe = require('../models/recipe')
 
 //GET ALL
