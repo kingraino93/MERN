@@ -14,6 +14,13 @@ index.get('/', async (req, res) => {
    }
 })
 
+// GET SPECIFIC 
+// index.get('/:name', async (req, res) => {
+//    try {
+//       Recipe.find(req.params.name)
+//    }
+// })
+
 //ADD NEW
 index.post('/', async (req, res) => {
    try {
