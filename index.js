@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 //routes
-app.use("/recipe", indexController);
+app.use("/recipes", indexController);
 
 //NOT FOUND
 app.get('*', (req, res) => {
