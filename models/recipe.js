@@ -7,41 +7,41 @@ const recipeSchema = new Schema(
   {
     name: {
       type: String,
-      required: true,
+      //required: true,
     },
     ingredients: {
       type: String,
-      required: true,
+      //required: true,
     },
     cuisine: {
       type: String,
-      required: true,
+      //required: true,
     },
     difficulty: {
       type: String,
-      required: true,
+      //required: true,
       enum: ["easy", "medium", "hard"],
     },
     rating: {
       type: Number,
-      required: true,
+      //required: true,
       enum: [1, 2, 3, 4, 5],
     },
     serving: {
       type: Number,
-      required: true,
+      //required: true,
     },
     prepTime: {
       type: Number,
-      required: true,
+      //required: true,
     },
     cookTime: {
       type: Number,
-      required: true,
+      //required: true,
     },
     steps: {
       type: String,
-      required: true,
+      //required: true,
     },
   },
   {
