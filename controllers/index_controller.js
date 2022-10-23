@@ -17,8 +17,8 @@ index.get('/all', async (req, res) => {
 //GET SPECIFIC 
 index.get('/:id', async (req, res) => {
    try {
-      let foundRecipe = await Recipe.find({_id: req.params.id})
-      res.status(200).send({foundRecipe})
+      let foundRecipe = await Recipe.findById(req.params.id)
+      res.status(200).send(foundRecipe)
    }
    catch (error) {
       res.status(500).json({message: 'Error Retreiving Recipe'})
