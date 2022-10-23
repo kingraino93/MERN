@@ -9,6 +9,9 @@ const recipeSchema = new Schema(
       type: String,
       //required: true,
     },
+    image: {
+      type: String
+    },
     ingredients: {
       type: String,
       //required: true,
