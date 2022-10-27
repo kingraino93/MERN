@@ -15,4 +15,4 @@ BackEnd created by: Brandon Extra https://github.com/Culossus Thomas Christian h
 | GET    | /recipes/:id | Get one recipe  |
 | POST   | /recipes     | Create recipe   |
 | DELETE | /recipes/:id | Delete a recipe |
-| EDIT   | /recipes/:id | Edit a recipe   |
+| PUT  | /recipes/:id | Edit a recipe   |
